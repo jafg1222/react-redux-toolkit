@@ -41,7 +41,7 @@ export const Fetcher = CreateFetchers("test", {
   },
 });
 
-export const Action = CreateAction("test", ["setOperatorData"]);
+export const Action = CreateAction("test", ["setTest"]);
 
 console.log(Action);
 
@@ -50,7 +50,7 @@ const INIT = {
 };
 const Reducer = createReducer(INIT, ({ addCase }) => {
   addCase(Fetcher.initial.fulfilled, (state) => ({ ...state, showTest: true }));
-  addCase(Action.setOperatorData, (state) => ({ ...state, showTest: true, action:"action" }));
+  addCase(Action.setTest, (state) => ({ ...state, showTest: true, action:"action" }));
 
 });
 
